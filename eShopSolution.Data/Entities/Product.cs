@@ -10,11 +10,15 @@ namespace eShopSolution.Data.Entities
     public class Product
     {
         public int Id { get; set; }
-        public int Price { get; set; }
-        public int OriginalPrice { get; set; }
+        public decimal Price { get; set; }
+        public decimal OriginalPrice { get; set; }
         public int Stock { get; set; }
         public int ViewCount { get; set; }
-        public int DateCreated { get; set; }
-        public int SeoAlias { get; set; }
+        public DateTime DateCreated { get; set; }
+        public string SeoAlias { get; set; }
+
+        public List<ProductInCategory> ProductInCategories { get; set; }
+
+        public List<OrderDetail> OrderDetails { get; set; }
     }
 }
